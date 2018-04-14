@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         final ArrayList<Selection> options = new ArrayList<Selection>();
         options.add(new Selection("Disney songs"));
         options.add(new Selection("Classics"));
-        options.add(new Selection("Lyrics"));
         SelectionAdapter adapter = new SelectionAdapter(this, options);
 
         ListView listView = (ListView) findViewById(R.id.listview);
@@ -36,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (position == 1) {
                     Intent myIntent = new Intent(MainActivity.this, Classics.class);
-                    MainActivity.this.startActivity(myIntent);
-                }
-                if (position == 2) {
-                    Intent myIntent = new Intent(MainActivity.this, DisneyActivity.class);
                     MainActivity.this.startActivity(myIntent);
                 }
             }
